@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  title: Vaccination Api
+  description: Done by Mehedi Hassan
+  version: 1.0.0
+  contact: 
+    email: mehedi132435@gmail.com
+  servers: 
+    -url: http://localhost:5000
+
+schemes: [http, https]
+
+paths:  
+      /api/fetchvaccine:  
+        description: Vaccine Info 
+        get:  
+         description: Operation to fetch the Vaccine info  
+         responses:  
+          200:  
+            description: Successful Response  
+
+      /api/createvaccine:
+        post:  
+          summary: Posting data
+          produces:
+            - application/json
+          consumes: 
+            -application/json  
+          parameters:
+          - in: body    
+            schema:  
+              type: object  
+              properties:  
+                place:  
+                  type: string
+                date:  
+                  type: string
+                origin:  
+                  type: string
+                name:  
+                  type: string
+          responses:  
+            201:  
+              description: Record successfully added      
