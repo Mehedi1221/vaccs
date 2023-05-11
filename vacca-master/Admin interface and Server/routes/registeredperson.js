@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const { createUser,updatedUserInfo, fetchUser,fetchAUser,fetchMailSentUser,updateVaccinatedUser,fetchVaccinatedUser, deleteUser, sendMail } = require('../controller/registeredperson.js');
+const { createUser,fetchAllUser,updatedUserInfo, fetchUser,fetchAUser,fetchMailSentUser,updateVaccinatedUser,fetchVaccinatedUser, deleteUser, sendMail } = require('../controller/registeredperson.js');
 
 
 
@@ -8,6 +8,7 @@ const { createUser,updatedUserInfo, fetchUser,fetchAUser,fetchMailSentUser,updat
 router.post('/createUser', createUser)
 router.patch('/updatedUserInfo/:mail', updatedUserInfo)
 router.get('/fetchUser', fetchUser)
+router.get('/fetchAllUser', fetchAllUser)
 router.get('/fetchAUser/:id', fetchAUser)
 router.get('/fetchMailSentUser', fetchMailSentUser)
 router.get('/fetchVaccinatedUser', fetchVaccinatedUser)

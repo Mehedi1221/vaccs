@@ -49,6 +49,15 @@ exports.fetchAUser = async (req, res) => {
   }
 };
 
+
+exports.fetchAllUser = async (req, res) => {
+  try {
+    const Getuser = await User.find();
+    return res.status(200).json(Getuser);
+  } catch (error) {
+    return res.status(200).json(error);
+  }
+};
 exports.fetchUser = async (req, res) => {
   try {
     const Getuser = await User.find({status: 'registered'});
@@ -107,11 +116,11 @@ exports.updatedUserInfo = async (req, res) => {
   try {
 
       const mail = req.params.mail;
-      const { name, phone, age, address, gender, vdate, vname, status } =
+      const { name, phone, age, address, gender, vdate, vname, status , profilePicture} =
       req.body;
 
     const UpdateStatus = await User.findOneAndUpdate({ mail:mail }, {
-      name, phone, age, address, gender, vdate, vname, status 
+      name, phone, age, address, gender, vdate, vname, status , profilePicture
     }, {new: true});
     if(UpdateStatus){
       return res.status(200).json({ message: "Edited Successfully" });

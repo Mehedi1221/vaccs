@@ -35,6 +35,11 @@ const userSchema = new mongoose.Schema({
         default:""
     },
 
+    profilePicture: {
+        type: String,
+        default:""
+    },
+
     status: {
         type: String,
         enum: ['','registered', 'mailSent', 'vaccinated'],

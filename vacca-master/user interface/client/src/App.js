@@ -8,6 +8,7 @@ import Types from './components/Types'
 import Vaccines from './components/vaccines.js'
 import LandingPage from './pages/landingPage';
 import ProfilePage from './pages/profile';
+import FeedBackPage from './pages/feedback';
 import {
   BrowserRouter,
   Routes,
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/login" element={<Login/>} />
           <Route exact path="/signup" element={<Signup/>} />
           <Route exact path="/profile" element={<ProfilePage/>} />
+          <Route exact path="/feedback" element={<FeedBackPage/>} />
 
         </Routes>
         </BrowserRouter>

@@ -47,7 +47,7 @@ function DarkExample() {
             return(
               <>
               <tr>
-              <td>{data.username}</td>
+              <td>{data.name}</td>
               <td>{data.phone}</td>
               <td>{data.mail}</td>
               <td>{data.age}</td>

@@ -26,7 +26,7 @@ function CCards() {
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                             </Card.Text>
-                            <Button variant="primary">For more</Button>
+                            <Button href='https://coronavirus.data.gov.uk/' variant="primary">For more</Button>
                         </Card.Body>
                     </Card>
                 </div>
@@ -39,7 +39,7 @@ function CCards() {
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                             </Card.Text>
-                            <Button variant="primary">For more</Button>
+                            <Button href='https://www.worldometers.info/coronavirus/country/germany/' variant="primary">For more</Button>
                         </Card.Body>
                     </Card>
                 </div>
